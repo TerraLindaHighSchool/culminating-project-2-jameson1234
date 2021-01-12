@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
             Rigidbody enemyRigidBody = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromPlayer = (collision.gameObject.transform.position - transform.position);
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
-            Debug.Log("Player collided with " + collision.gameObject + " with powerup set to ");
+            Debug.Log("Vehicle collided with " + collision.gameObject + " with powerup set to ");
             enemyRigidBody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
 
         }
