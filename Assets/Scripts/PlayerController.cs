@@ -10,11 +10,12 @@ public class PlayerController : MonoBehaviour
     private float forwardInput;
     private float powerupStrength = 15.0f;
     public ParticleSystem explosionParticle;
+    private SpawnManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        gameManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
     }
 
     // Update is called once per frame
@@ -26,6 +27,12 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         // Rotates the car based on horizontal input
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+        
+        if (transform.position.y < -5)
+        {
+            Destroy(gameObject);
+            gameManager.GameOver();
+        }
 
 
     }

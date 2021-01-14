@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1450959277545711612}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,6 +123,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05637cddc953fa4bb4e8e56a4594a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  explosionParticle: {fileID: 4758139293545943008, guid: c7ad2532a6eeb40b59033c75e71fa054,
-    type: 3}
+  speed: 60
+  pointValue: 0
